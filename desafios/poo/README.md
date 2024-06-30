@@ -61,4 +61,34 @@ classDiagram
 
 ```bash
 https://github.com/glysns/trilha-java-basico/desafios/poo/README.md
-```` 
+````
+
+### Desafio Modelando o iPhone com UML: Funções de Músicas, Chamadas e Internet
+```mermaid
+---
+title: Modelando o iPhone com UML
+---
+classDiagram
+    ReprodutorMusical <|-- IPhone
+    AparelhoTelefonico <|-- IPhone
+    NavegadorInternet <|-- IPhone
+    class ReprodutorMusical{
+        <<interface>>
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+    }
+    class AparelhoTelefonico{
+        <<interface>> 
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+    class NavegadorInternet{
+        <<interface>> 
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+```
+
